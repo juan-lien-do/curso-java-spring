@@ -29,7 +29,7 @@ public class ClienteController {
         }
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<ClienteDTO> postCliente(@RequestBody ClienteDTO clienteBody) {
         try {
             ClienteDTO clienteDTO = clienteService.saveCliente(clienteBody);
