@@ -17,11 +17,14 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig{
+
+    //Este sirve para indicarle a spring security que desactive toda la protección para una ruta en específico
     /*@Bean
     WebSecurityCustomizer ignoringCustomizer() {
         return (web) -> web.ignoring().requestMatchers("/api/clientes");
     }*/
 
+    // aca definimos algunos aspectos de la seguridad
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
@@ -36,6 +39,7 @@ public class SecurityConfig{
         return http.build();
     }
 
+    // aca definimos un usuario InMemory
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails user = User.withDefaultPasswordEncoder()
