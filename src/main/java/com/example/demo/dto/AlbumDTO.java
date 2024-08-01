@@ -12,5 +12,5 @@ import lombok.Setter;
 public class AlbumDTO {
     private Long albumId;
     private String title;
-    private String nombreArtista;
+    private Long artistaId;
 }

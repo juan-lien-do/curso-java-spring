@@ -2,13 +2,15 @@ package com.example.demo.domain;
 
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "albums")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
